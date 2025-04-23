@@ -1,0 +1,44 @@
+<header class="header-container">
+  <div>
+    <app-button variant="primaria" size="sm" (click)="handleToogleModalView()">
+      <svg #svgEl class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="40" height="40" stroke="#ffffff" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">  <path d="M2,3L5,3L8,3 M2,5L8,5 M2,7L5,7L8,7">
+      <animate #startAnim attributeName="d" dur="0.2s" values="M2,3L5,3L8,3 M2,5L8,5 M2,7L5,7L8,7;M3,3L5,5L7,3 M5,5L5,5 M3,7L5,5L7,7" fill="freeze" begin="indefinite" />
+      <animate #reverseAnim attributeName="d" dur="0.2s" values="M3,3L5,5L7,3 M5,5L5,5 M3,7L5,5L7,7;M2,3L5,3L8,3 M2,5L8,5 M2,7L5,7L8,7" fill="freeze" begin="indefinite"/>
+  </path>
+</svg>
+
+    </app-button>
+  </div>
+
+  <div>
+    <figure>
+      <img
+        ngSrc="assets/images/logo_quantumcom.png"
+        priority="true"
+        alt="Logotipo com fundo preto. À esquerda, há um ícone representando um átomo, com três orbitais brancos envolvendo um núcleo amarelo no centro e três partículas coloridas (vermelha, azul e verde) posicionadas nas extremidades das órbitas. À direita do ícone, está escrito 'QUANTUM.COM' em letras maiúsculas brancas, com destaque para a tipografia moderna e limpa."
+        width="265"
+        height="109"
+      />
+    </figure>
+  </div>
+
+  <div>
+    <ul class="header-links regular-text">
+      <li><a routerLink="/">Página Inicial</a></li>
+      <li><a href="#artigos">Artigos</a></li>
+      <li><a routerLink="/">Sobre Nós</a></li>
+    </ul>
+  </div>
+</header>
+
+<nav
+  class="menu-lateral"
+  [attr.data-menu-visible]="isModalOpen"
+>
+  <h2 class="medium-text">Artigos</h2>
+  <ul class="menu-links">
+    @for(artigo of artigos; track artigo){
+      <li><a [href]="artigo.path" class="regular-text">{{ artigo.name }}</a></li>
+    }
+  </ul>
+</nav>
