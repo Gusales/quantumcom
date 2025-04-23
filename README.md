@@ -1,59 +1,26 @@
-# Quantumcom
+⚛️ QuantumCom
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+> Um portal universitário para o futuro da computação
 
-## Development server
+## 🧠 Sobre o projeto
 
-To start a local development server, run:
+O **QuantumCom** é um site de notícias voltado exclusivamente para a **computação quântica**, criado por um grupo de universitários de São Paulo em 2024. Nosso objetivo é **tornar acessível o conhecimento sobre uma das áreas mais promissoras da tecnologia**, abordando desde os fundamentos até as aplicações mais avançadas.
 
-```bash
-ng serve
-```
+## 📚 O que você encontra no QuantumCom
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Informações gerais sobre **o que é a computação quântica**
+- Explicações sobre **como funciona e como foi desenvolvida**
+- Reportagens e artigos feitos por universitários
+- **Avanços e atualizações mais recentes** da área
+- Tecnologias que integram e impulsionam a computação quântica
+- Indicações de **cursos e trilhas de aprendizado** para quem deseja entrar na área
 
-## Code scaffolding
+## 🚀 Nosso propósito
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Promover a **divulgação científica** e despertar o interesse em **novas gerações de profissionais** para essa área revolucionária da tecnologia.
 
-```bash
-ng generate component component-name
-```
+## 🛠️ Stack utilizada
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**Front-end:** AngularJS, Typescript
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Back-end:** (A definir)
