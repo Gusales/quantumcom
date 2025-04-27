@@ -1,1 +1,155 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* Reset e configurações globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --page-margin: 4rem;
+  --base-font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background: #0A0F19;
+  overflow-x: hidden;
+}
+
+/* Tipografia */
+.hanken-grotesk {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #FFFFFF;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #EEEEEE;
+  font-weight: 400;
+}
+
+/* Peso da fonte */
+.light {
+  font-weight: 300;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+h1 {
+  /* Tamanho do h1 */
+  font-size: calc(var(--base-font-size) * 4.688);
+  /* Line-height proporcional */
+  line-height: calc(var(--base-font-size) * 4.688 * 1.2);
+
+  /* Indica o peso da fonte, o quão mais espessa ela é */
+  font-weight: 800;
+}
+
+h2 {
+  /* Tamanho do h2 */
+  font-size: calc(var(--base-font-size) * 3.125);
+  /* Line-height proporcional */
+  line-height: calc(var(--base-font-size) * 3.125 * 1.2);
+
+  /* Peso da Fonte */
+  font-weight: 700;
+}
+
+h3 {
+  /* Tamanho do h3 */
+  font-size: calc(var(--base-font-size) * 2.5);
+  /* Line-height proporcional */
+  line-height: calc(var(--base-font-size) * 2.5 * 1.2);
+  font-weight: 700;
+}
+
+h4 {
+  /* Tamanho do h4 */
+  font-size: calc(var(--base-font-size) * 2);
+  /* Line-height proporcional */
+  line-height: calc(var(--base-font-size) * 2 * 1.2);
+  font-weight: 600;
+}
+
+h5,
+span {
+  /* Tamanho do h5 */
+  font-size: calc(var(--base-font-size) * 1.6);
+  /* Line-height proporcional */
+  line-height: calc(var(--base-font-size) * 1.6 * 1.2);
+
+  font-weight: 600;
+}
+
+p, a {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+a {
+  text-decoration: none;
+  transition: text-decoration 400ms;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.regular-text {
+  color: #EEEEEE;
+  font-size: var(--base-font-size);
+  line-height: calc(var(--base-font-size) * 1.4);
+}
+
+.small-text {
+  font-size: calc(var(--base-font-size) * 0.875);
+  line-height: calc(var(--base-font-size) * 0.875 * 1.4);
+}
+
+.medium-text {
+  font-size: calc(var(--base-font-size) * 1.125);
+  line-height: calc(var(--base-font-size) * 1.125 * 1.4);
+}
+
+.large-text {
+  font-size: calc(var(--base-font-size) * 1.25);
+  line-height: calc(var(--base-font-size) * 1.25 * 1.4);
+  color: #BAD9FC;
+}
+
+@media screen and (max-width: 1023px) {
+  :root {
+    --page-margin: 2rem
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --page-margin: 1rem
+  }
+}

@@ -1,0 +1,49 @@
+button {
+  border: none;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 7px;
+  outline-offset: -2px;
+}
+
+button:hover {
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.primaria {
+  background: #0F2239;
+}
+
+.primaria:hover{
+  background: #132c49;
+}
+
+.secundaria{
+  background: #1C5CB0;
+}
+
+.secundaria:hover{
+  background: #1F98D7;
+}
+
+.sm {
+  max-width: 200px;
+  color: white;
+  height: 45px;
+}
+
+.md {
+  color: #ffffff;
+  min-width: 240px;
+  height: 50px;
+}
+
+.lg {
+  color: #ffffff;
+  min-width: 250px;
+  height: 50px;
+}
