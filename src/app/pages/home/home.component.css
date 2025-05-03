@@ -20,6 +20,7 @@ article {
 figure {
   display: flex;
   justify-content: center;
+  filter: drop-shadow(2px 4px 100px #2D213C);
 
   img  {
     height: 500px;

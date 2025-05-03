@@ -1,5 +1,5 @@
-import { NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ButtonComponent } from "../ui/button/button.component";
 
@@ -14,7 +14,7 @@ interface ArtigosInterface {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, RouterLink, ButtonComponent, FontAwesomeModule],
+  imports: [NgOptimizedImage, RouterLink, ButtonComponent, FontAwesomeModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
@@ -60,6 +60,8 @@ export class HeaderComponent {
     },
   ]
 
+  public isPageScroll = false
+
   @ViewChild('startAnim', { static: true })
   startAnim!: ElementRef<SVGAnimateElement>;
 
@@ -74,5 +76,10 @@ export class HeaderComponent {
     } else {
       this.reverseAnim.nativeElement.beginElement();
     }
+  }
+
+  @HostListener("window:scroll", [])
+  public onScroll(): void {
+    this.isPageScroll = window.scrollY > 0
   }
 }

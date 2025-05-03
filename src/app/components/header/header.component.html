@@ -1,4 +1,4 @@
-<header class="header-container">
+<header [ngClass]="{'scrolled': isPageScroll}" class="header-container">
   <div>
     <app-button variant="primaria" size="sm" (click)="handleToogleModalView()">
       <svg #svgEl class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="40" height="40" stroke="#ffffff" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">  <path d="M2,3L5,3L8,3 M2,5L8,5 M2,7L5,7L8,7">
@@ -16,8 +16,8 @@
         ngSrc="assets/images/logo_quantumcom.png"
         priority="true"
         alt="Logotipo com fundo preto. À esquerda, há um ícone representando um átomo, com três orbitais brancos envolvendo um núcleo amarelo no centro e três partículas coloridas (vermelha, azul e verde) posicionadas nas extremidades das órbitas. À direita do ícone, está escrito 'QUANTUM.COM' em letras maiúsculas brancas, com destaque para a tipografia moderna e limpa."
-        width="375"
-        height="150"
+        width="746"
+        height="163"
         class="header-logo"
       />
     </figure>
