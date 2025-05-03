@@ -1,5 +1,5 @@
 .hero{
-  min-height: 100vh;
+  min-height: 70vh;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -9,6 +9,7 @@
 article {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 
   .hero-button{
@@ -20,10 +21,18 @@ article {
 figure {
   display: flex;
   justify-content: center;
+  align-items: center;
   filter: drop-shadow(2px 4px 100px #2D213C);
 
   img  {
     height: 500px;
+  }
+}
+
+section.container-timeline{
+  margin-top: 2rem;
+  h2{
+    text-align: center;
   }
 }
 
