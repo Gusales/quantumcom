@@ -1,0 +1,20 @@
+<ul class="timeline-container">
+  @for(card of cardItems; track card.cardYear){
+    <li class="timeline-item" appTimelineObserver>
+      <div class="timeline-dot"></div>
+      <p class="timeline-date poppins regular-text">
+        {{ card.cardYear }}
+      </p>
+
+      <div class="timeline-content timeline-concealed">
+        <h3 class="hanken-grotesk large-text">
+          {{ card.cardTitle }}
+        </h3>
+
+        <p class="poppins">
+          {{ card.cardText }}
+        </p>
+      </div>
+    </li>
+  }
+</ul>

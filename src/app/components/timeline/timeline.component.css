@@ -1,0 +1,132 @@
+ul.timeline-container{
+  margin: auto;
+  margin-top: 4rem; /* 64px */
+  list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+  gap: .5rem;
+}
+
+li.timeline-item{
+  margin-bottom: 2.5rem ; /* 40px */
+	width: 100%;
+	position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150%;
+    background-color: #2f363e;
+    left: calc(50% - 1px);
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: left;
+  }
+
+  &:nth-child(even){
+    padding-left: calc(50% + 30px);
+  }
+
+  &.blue-bar::before{
+    background-color: #1F98D7;
+    transition: background 3000ms;
+  }
+
+  div.timeline-dot{
+    height: 16px;
+    width: 16px;
+    background-color: #1C5CB0;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top:10px;
+
+    &.animate-dot{
+      transition: 2s;
+      filter: drop-shadow(0 0 0.75rem #1F98D7);
+    }
+  }
+
+  p.timeline-date{
+    color: #879FB3;
+    margin:6px 0 15px;
+  }
+
+  div.timeline-content{
+    background-color: #0E1727;
+    padding: 30px;
+    border-radius: 5px;
+
+    h3{
+      color: #FDC238;
+      font-weight: 700;
+    }
+  }
+}
+
+.timeline-concealed{
+	opacity: 0;
+	transition: 1s;
+	filter: blur(5px);
+}
+
+.timeline-item:nth-child(odd) .timeline-concealed{
+	transform: translateX(-250px);
+}
+
+.timeline-item:nth-child(even) .timeline-concealed{
+	transform: translateX(250px);
+}
+
+.timeline-item:nth-child(even) .timeline-appear{
+	transform: translateX(0);
+	opacity: 1;
+	filter: blur(0);
+}
+
+.timeline-item:nth-child(odd) .timeline-appear{
+	transform: translateX(0);
+	opacity: 1;
+	filter: blur(0);
+}
+
+/* responsive */
+@media screen and (max-width: 767px){
+	li.timeline-item:nth-child(odd){
+    padding-right: 0;
+		text-align: left;
+	}
+
+	li.timeline-item:nth-child(odd),
+	li.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+
+	li.timeline-item div.timeline-dot{
+    left:0;
+	}
+
+	li.timeline-item::before{
+		left: 7px;
+	}
+
+	li.timeline-item:nth-child(odd) .timeline-concealed,
+  li.timeline-item:nth-child(even) .timeline-concealed{
+		transform: translateX(250px);
+	}
+
+	li.timeline-item:nth-child(even) .timeline-appear,
+  li.timeline-item:nth-child(odd) .timeline-appear{
+		transform: translateX(0);
+		opacity: 1;
+		filter: blur(0);
+	}
+}
